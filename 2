@@ -1,0 +1,36 @@
+mport turtle as t
+import math
+
+
+xc = float(input(''))
+yc = float(input(''))
+r = float(input(''))
+x = float(input(''))
+y = float(input(''))
+
+interval = math.sqrt((x - xc) ** 2 + (y - yc) ** 2)
+
+if interval < r:
+    point = "Точка внутри окружности"
+elif interval == r:
+    point = "Точка на окружности"
+else:
+    point = "Точка вне окружности"
+
+t.speed(0)
+t.penup()
+t.goto(xc, yc - r)
+t.pendown()
+t.circle(r)
+t.penup()
+
+t.goto(x, y)
+t.pendown()
+t.dot(7, "red")
+t.penup()
+
+t.goto(xc-50 , yc - 90)
+t.write(f"{point}")
+
+t.hideturtle()
+t.done()
