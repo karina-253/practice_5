@@ -1,1 +1,6 @@
-
+pin = int(input())
+if (pin // 1000 !=0 and pin // 1000 != pin // 100 % 10 != pin % 100 // 10 != pin % 10
+        and 1900 >= pin >= 2050):
+    print('ERROR')
+else:
+    print('OK')
