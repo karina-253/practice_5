@@ -1,0 +1,18 @@
+weight = int(input('Введите вес человека(в фунтах):'))
+height = int(input('Введите высоту человека(в дюймах):'))
+BMI = int(weight*703) / int(height**2)
+round_BMI = round(float(BMI), 2)
+if round_BMI < 16:
+    print('выраженный дефицит массы тела')
+elif 16 <= round_BMI <= 18.49:
+    print('недостаточная масса тела')
+elif 18.5 <= round_BMI <= 24.99:
+    print('норма')
+elif 25 <= round_BMI <= 29.99:
+    print('избыточная масса тела')
+elif 30 <= round_BMI <= 34.99:
+    print('ожирение первой степени')
+elif 35 <= round_BMI <= 39.99:
+    print('ожирение второй степени')
+else:
+    print('ожирение')
