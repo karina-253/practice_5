@@ -1,0 +1,8 @@
+num = input()
+N, K, M = map(int, num.split())
+distance1 = (M - K) % N
+distance2 = (K - M) % N
+if distance1<distance2:
+    print(distance1 - 1)
+else:
+    print(distance2 - 1)
