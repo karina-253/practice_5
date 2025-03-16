@@ -1,0 +1,9 @@
+num = input()
+b1, b2, b3 = map(int, num.split())
+if b1<b2:
+    b1, b2 = b2, b1
+if b1<b3:
+    b1, b3 = b3, b1
+if b2<b3:
+    b2, b3 = b3, b2
+print(b1, b2, b3)
